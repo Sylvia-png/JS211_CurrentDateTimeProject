@@ -7,9 +7,49 @@
   </head>
   <body>
     <h1>Hello World!</h1>
+    <button onclick="displayDate()">Display Date</button>   
+    <!-- // Display the current day and time-->
+    <div id="display-date"></div>
     <hr/>
-    <div id="display-element"></div>
-    <button onclick="displayDate()">Click Me</button>
+    <!--// Convert a number to a string -->
+    <p>Sum string and integer</p>
+    <button onclick="displayNumber()">Display string</button>
+    <div id="display-number"></div>
     <hr/>
+    <!--// Convert a string to the number -->
+    <p>String to the number</p>
+    <button onclick="displayString()">Display number</button>
+    <div id="display-string"></div>
+    <hr/>
+    <!-- // Runs only when 2 things are true -->
+    <p>Runs two things are true</p>
+    <button onclick="displayTrue(true, true)">Display true</button>
+    <div id="display-true"></div>
+    <hr/>
+    <!--Program that takes in different datatypes *-->
+    <p>Different datatypes</p>
+    <button onclick="displayTypes(45)">Different Data types</button>
+    <div id="display-types"></div>
+    <hr/>
+    <!--Program that adds 2 numbers together *-->
+    <p>Adds 2 numbers together </p>
+    <button onclick="displayAdd(5, 8)">Adds 2 numbers together </button>
+    <div id="display-add"></div>
+    <hr/>
+    <!--Program that runs when 1 of 2 things are true *-->
+    <p>1 of 2 things are true</p>
+    <button onclick="displayThingsTrue(true, false)">1 of 2 things are true</button>
+    <div id="display-things"></div>
+    <hr/>
+    <!--Program that runs when both things are not true *-->
+    <p>Both things are not true</p>
+    <button onclick="displayNotTrue(false, false)">Both things are not true</button>
+    <div id="display-nTrue"></div>
+    <hr/>
+
+
   </body>
 </html>
+
+
+
