@@ -1,99 +1,90 @@
 // **THIS IS INCREDIBLY IMPORTANT THAT YOU DO BOTH SECTIONS!!! You will be doing only front-end work in 421 and you need to brush up on your HTML elements**
-
-
 // ***************************
 //          PART ONE
 // ***************************
-// Write a JavaScript program to display the current day and time, start with:
+// ok - Write a JavaScript program to display the current day and time, start with:
 console.log(new Date)
-
 const displayDate = () => {
   const currentDate = new Date()
-
   document.getElementById("display-date").innerHTML = currentDate;
 }
  
-// Write a JavaScript program to convert a string to the number.
+//ok - Write a JavaScript program to convert a string to the number.
 const displayNumber = () => {
-  let a = "200";
-  let b = "34n4n";
-  let c = "125.98";
-
-  resultA = parseInt(a) + 500;
-  document.getElementById("display-number").innerHTML = resultA;
+  let num = document.getElementById("numString").value
+  numString = num.toString();
+  document.getElementById("display-number").innerHTML = `" ${numString} " `;
+  console.log(typeof(numString));
 }
 
-// Write a JavaScript program to convert a number to a string.
+// ok - Write a JavaScript program to convert a number to a string.
 const displayString = () =>{
-  var x = 19;
-  console.log(typeof x);
-  res = x.toString();
-  console.log(typeof res);
-  document.getElementById("display-string").innerHTML = res;
+  let str =  document.getElementById("stringN").value
+  stringNum = parseInt(str);
+  document.getElementById("display-string").innerHTML = stringNum;
+  console.log(typeof(stringNum));
 }
 
 
 // Write a JavaScript program that runs only when 2 things are true.
-const displayTrue = (x, y) => {
-  if(x === true && y === true){
-    document.getElementById("display-true").innerHTML = "x = " + (x) + " y = " + (y);
+const displayTrue = () => {
+  let thing1 =  document.getElementById("e3-thing1").value
+  let thing2 =  document.getElementById("e3-thing2").value
+  if(thing1 == "true" && thing2 == "true"){
+    document.getElementById("display-true").innerHTML = "all values are true";
+  } else {
+    document.getElementById("display-true").innerHTML = "all values must be true"
   }
 }
 
 
-// Write a JavaScript program that takes in different datatypes and prints out whether they are a:
+//ok - Write a JavaScript program that takes in different datatypes and prints out whether they are a:
   // * Boolean
   // * Null
   // * Undefined
   // * Number
   // * NaN
   // * String
-  const displayTypes = (data) =>{
-
-      if (typeof(data) == 'boolean') {
-        res = "This is a boolean value";
-      }
-      else if (typeof(data) === 'null') {
-        res = "null";
-      }
-      else if (typeof(data) === 'undefined') {
-        res = "undefined";
-      }
-      else if (typeof(data) === "number") {
-        res = "number";
-      }
-      else if (data === "nan"){
-        res = "nan";
-      }
-      else if (typeof(data) === "string") {
-        res = "string";
-      }
-    document.getElementById("display-types").innerHTML = res;  
+const displayTypes = () =>{
+  let data =  document.getElementById("dataTxt").value;
+  let dataType = typeof(data);
+  document.getElementById("display-types").innerHTML = "data: " + data + " dataType: " + dataType;
+  console.log(typeof(data));
+  console.log(typeof(dataType));
 }
 
-
- 
 // Write a JavaScript program that adds 2 numbers together.
-const displayAdd = (x, y) =>{
-  var res = x + y;
+const displayAdd = () =>{
+  let x = parseInt(document.getElementById("x").value);
+  let y = parseInt(document.getElementById("y").value);
+  //let res
+  res = x + y;
   console.log(res);
   document.getElementById('display-add').innerHTML = res;
 }
 
 
 // Write a JavaScript program that runs when 1 of 2 things are true.
-const displayThingsTrue = (x, y) => {
-  if(x === true || y === true){
-    document.getElementById("display-things").innerHTML = "x = " + (x) + " y = " + (y);
+const displayThingsTrue = () => {
+  let thing1 =  document.getElementById("e6-thing1").value
+  let thing2 =  document.getElementById("e6-thing2").value
+  if(thing1 == "true" || thing2 == "true"){
+    document.getElementById("display-things").innerHTML = "one value is true";
+  } else {
+    document.getElementById("display-things").innerHTML = "all values are false"
   }
 }
 
 
 
 // Write a JavaScript program that runs when both things are not true.  
-const displayNotTrue = (x, y) => {
-  if(x === false && y === false){
-    document.getElementById("display-nTrue").innerHTML = "x = " + (x) + " y = " + (y);
+const displayNotTrue = () => {
+  let thing1 =  document.getElementById("e7-thing1").value
+  let thing2 =  document.getElementById("e7-thing2").value
+  if(thing1 == "false" && thing2 == "false"){
+    document.getElementById("display-nTrue").innerHTML = "all value are false";
+  } else {
+    document.getElementById("display-nTrue").innerHTML = "all values must be false"
   }
 }
 
